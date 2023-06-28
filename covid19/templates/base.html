@@ -1,0 +1,107 @@
+{% load static %}
+
+<!-- base.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Covid19 Hotspot Hunter</title>
+	
+	<link rel="icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
+	
+    <style>
+      /* CSS styles for the body */
+      body {
+        text-align: center;
+        background-color: #121212;
+        color: #FFFFFF;
+      }
+
+      /* CSS styles for the banner container */
+      .banner-container {
+        position: relative;
+        background-image: url("{% static 'images/banner_image.jpg' %}");
+        background-size: cover;
+        height: 300px;  /* Adjust the height as needed */
+        color: white;  /* Text color on the banner */
+      }
+
+      /* CSS styles for the overlay text */
+      .banner-text {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 24px;
+        font-weight: bold;
+      }
+
+      ul.horizontal-list {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      ul.horizontal-list li {
+        display: inline-block;
+        margin-right: 10px; /* Adjust spacing between items */
+      }
+
+      .list-container {
+        /*background-color: #F0F0F0; */
+        background-color: #6C7A89;
+        padding: 10px;
+      }
+
+      .list-container ul {
+        list-style-type: none; /* Remove default bullet points */
+        margin: 0;
+        padding: 0; /* Remove default padding */
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      h1, h2, h3 {
+        text-decoration: underline;
+      }
+	  
+	ul {
+		list-style-type: none;
+	}
+	
+	.email-link {
+	  background-color: #f2f2f2;
+	  padding: 2px 5px;
+	  border-radius: 4px;
+}
+	
+</style>
+
+</head>
+	<body>
+		<header class="banner-container">
+		<div class="banner-text">
+			<h1>Welcome to the Covid19 Hotspot Hunter website</h1>
+				<p>This site is designed to allow you to interact with the UK Gov published data around Covid19</p>
+					<div class="list-container">
+						<nav>
+							<ul class="horizontal-list">
+								<li><a href="/">Home</a></li>
+								<li><a href="/metrics/">Metrics</a></li>
+								<li><a href="/areas/">Areas</a></li>
+								<li><a href="/report/">Report</a></li>
+								<li><a href="/query/">Query</a></li>
+								<li><a href="/about/">About</a></li>
+								<li><a href="/announcements/">Data Announcements</a></li>
+							</ul>
+						</nav>
+					</div>
+				  </div>
+    </header>
+	
+    <main>
+      {% block content %}{% endblock %}
+    </main>
+	
+  </body>
+</html>

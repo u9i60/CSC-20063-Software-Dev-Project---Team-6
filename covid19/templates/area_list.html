@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+{% block content %}
+
+<head>
+    <title>Areas</title>
+</head>
+
+<body>
+    <h1>Area Details</h1>
+	
+	<ul class="vertical-list">
+	  {% for a in areas %}
+		<li>Area Code: {{ a.areaCode }}, Area Name: {{ a.areaName}}, Area Type: {{ a.areaType}}</li>
+	  {% endfor %}
+	</ul>
+	
+</body>
+{% endblock %}

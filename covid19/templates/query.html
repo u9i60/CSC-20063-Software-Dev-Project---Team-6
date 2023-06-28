@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<body>
+
+<h3>Enter a postcode to view data about the area:</h3>
+
+<form method="post" action="{% url 'query' %}">
+    {% csrf_token %}
+    {{ form }}
+    <button type="submit">Submit</button>
+</form>
+
+</body>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+{% block content %}
+
+<body>
+    <h1>UK Gov Covid Data Announcements</h1>
+	
+	<p>This page details announcements made relating to the UK Gov covid data</p>
+	
+	<ul class="vertical-list">
+	  {% for a in announcements %}
+		<li>Date announced:{{a.date}} | Announcement: {{ a.body }}</li>
+	  {% endfor %}
+	</ul>
+	
+</body>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<head>
+    <title>Results</title>
+</head>
+
+<body>
+
+	{% for result in results %}
+    <div>
+        <p>Metric Code: {{ result.metric}}, Metric  Name: {{ result.metric_name }}</p>
+    </div>
+	{% endfor %}
+
+</body>
+{% endblock %}

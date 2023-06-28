@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+{% block content %}
+
+<body>
+
+<h3>Metrics</h3>
+<p>This page contains a list of metrics available from the dataset</p>
+
+<h3>Areas</h3>
+<p>This page contains a list of areas to which the dataset corresponds. This varies by metric but overall there are varying degrees of granularity from Nation (e.g. England, Northern Island, Scotland & Wales) all the way down to lower tier local authority (LTLA). For more information, see the <a  class="email-link"  href="/about/">About</a>  page. </p>
+ 
+<h3>Report</h3>
+<p>Follow the link to create a personalised report</p>
+
+<h3>Query Results</h3>
+<p>This page is a test area to run ad hoc sql queries</p>		
+
+<h3>Contact Information</h3>
+<p>Please see the "About" page for contact details
+
+<h3>Disclaimer</h3>
+<div>
+  <p>This website provides general information and is intended for educational and informational purposes only. None of the content on this website should be considered as medical advice or a substitute for professional medical consultation.</p>
+  <p>Always seek the advice of a qualified healthcare professional regarding any medical condition or treatment. The information on this website is not intended to diagnose, treat, cure, or prevent any disease.</p>
+  <p>Reliance on any information provided on this website is solely at your own risk. The website owner, authors, and contributors shall not be held responsible or liable for any errors or omissions in the content or for any actions taken based on the information provided.</p>
+</div>	
+
+</body>
+{% endblock %}

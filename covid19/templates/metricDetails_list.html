@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+{% block content %}
+
+<head>
+    <title>Metrics</title>
+</head>
+
+<body>
+    <h1>Metric Details</h1>
+	
+	<ul class="vertical-list">
+	  {% for m in metrics %}
+		<li>Metric: {{ m.metric_name }}, Category: {{ m.category}}, Date deprecated: {{ m.deprecated}}</li>
+	  {% endfor %}
+	</ul>
+	
+</body>
+{% endblock %}
